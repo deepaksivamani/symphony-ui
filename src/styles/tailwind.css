@@ -1,5 +1,118 @@
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
+
+.h-calc {
+    height: calc(100vh - 80px);
+  }
+  
+  .mh-calc {
+    height: calc(100vh - 158px - 100px);
+  }
+  
+  .bottom-24 {
+    bottom: 6rem !important;
+  }
+  .swiper-pagination-bullet-active {
+    background: #07c806 !important;
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 22px !important;
+  }
+  
+  /* .lg\:500 {
+    height: 500px;
+  } */
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #07c806 !important;
+  }
+  @media (max-width: 1024px) {
+    .d-hidden {
+      display: none !important;
+    }
+  }
+  @media (min-width: 1024px) {
+    .lg\:h-500 {
+      height: 600px !important;
+    }
+  }
+  @media (min-width: 1200px) {
+    .lg\:h-500 {
+      height: 550px !important;
+    }
+    .md\:d-flex {
+      display: flex !important;
+    }
+  }
+  
+
+  .w-35 {
+    width: 35px;
+    height: 35px;
+  }
+
+  
+ 
+  
+  /* Customize the label (the container) */
+  .container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 8px;
+    top: 3px;
+    width: 7px;
+    height: 13px;
+    border: solid white;
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  /* @media (max-width: 1920px) {
+    .card-body{
+      height:fit-content; 
+    }
+  }
+  @media (max-width: 768px) {
+    .card-body{
+      height:auto; 
+    }
+  } */
+
+  
