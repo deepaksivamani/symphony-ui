@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+
+@tailwind utilities;
+
+.h-calc {
+  height: calc(100vh - 80px);
+}
+
+.mh-calc {
+  height: calc(100vh - 158px - 100px);
+}
+
+.bottom-24 {
+  bottom: 6rem !important;
+}
+.swiper-pagination-bullet-active {
+  background: #07c806 !important;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 22px !important;
+}
+
+/* .lg\:500 {
+  height: 500px;
+} */
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #07c806 !important;
+}
+@media (max-width: 1024px) {
+  .d-hidden {
+    display: none !important;
+  }
+}
+@media (min-width: 1024px) {
+  .lg\:h-500 {
+    height: 600px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .lg\:h-500 {
+    height: 550px !important;
+  }
+  .md\:d-flex {
+    display: flex !important;
+  }
+}
+
+@layer components {
+  .body-main {
+    @apply flex justify-between items-center h-calc bg-background-100;
+  }
+  .body-wrapper {
+    @apply bg-background-100 pb-0 lg:pb-20;
+  }
+  .btn-primary {
+    @apply p-2 bg-primary w-full lg:w-64 text-white text-lg rounded-full mt-4;
+  }
+  .sy-card {
+    @apply p-4 flex items-center justify-between border-b border-gray-200 w-full;
+  }
+}
+
+.artist-img {
+  @apply relative;
+}
+.artist-img img {
+  @apply w-10 h-10 object-fill overflow-hidden rounded-md relative;
+}
+
+.social-img {
+  @apply w-4 h-4 object-cover rounded-full flex-none;
+}
+.social-text {
+  @apply flex-auto;
+}
+
+.sy-card a {
+  @apply no-underline;
+}
+
+.artist-list {
+  @apply pb-5;
+}
+
+.bg-green {
+  @apply bg-primary border-4;
+}
+
+.w-35 {
+  width: 35px;
+  height: 35px;
+}
+.container span {
+  @apply font-normal pl-2;
+}
+.number {
+  @apply rounded-full flex items-center justify-items-center w-10 h-10 bg-primary;
+}
+.number p {
+  @apply text-white pt-1;
+}
+
+.hr-bline {
+  @apply border-b border-background-100;
+}
+
+/* Facebook */
+.btn.btn-facebook {
+  @apply border border-socialColor-facebook bg-socialColor-facebook w-full px-4 text-white py-2 rounded-full md:mx-20 mx-2 mx-auto;
+}
+.btn.btn-facebook:hover {
+  @apply border border-socialColor-facebook bg-socialColor-facebook text-white shadow-none;
+}
+
+.btn-i {
+  @apply py-1 px-5  float-left;
+}
+
+/* Customize the label (the container) */
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  @apply bg-background-100 border border-background-100 rounded-full;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  @apply bg-primary;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  @apply bg-primary;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 8px;
+  top: 3px;
+  width: 7px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 1px 1px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+button:disabled {
+  @apply bg-background-100 border border-background-100 text-gray-400;
+}
+
+.card-body {
+  @apply w-full lg:w-2/4  m-auto lg:pb-5 pb-4 bg-white;
+}
+/* @media (max-width: 1920px) {
+  .card-body{
+    height:fit-content; 
+  }
+}
+@media (max-width: 768px) {
+  .card-body{
+    height:auto; 
+  }
+} */
+.card-content {
+  @apply bg-white shadow-none flex flex-col justify-between h-screen lg:h-full mt-0 mb-0 lg:mt-28;
+}
+.card-head {
+  @apply bg-white lg:bg-primary w-full p-5 text-center;
+}
+
+.onboarding img {
+  @apply w-full h-64 object-fill;
+}
+.onboarding-title {
+  @apply text-left lg:text-center mt-8 mb-2 text-3xl font-bold;
+}
+
+.onboarding-para {
+  @apply text-left lg:text-center mb-8;
+}
