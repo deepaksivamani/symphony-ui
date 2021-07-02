@@ -6,7 +6,7 @@ const AddArtist = () => {
   const [searchResults, setSearchResult] = useState([]);
   const [searchStr, setSearchStr] = useState('');
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     setSearchStr(e.target.value);
     console.log("searched for: ", e.target.value);
     if(e.target.value.length) {
@@ -70,7 +70,7 @@ const AddArtist = () => {
                   />
                 </div>
                   <div className="add-new">
-                  {searchResults.map((item) => {
+                  {searchResults.map((item: any) => {
                     return (
                       <div className="sy-card">
                     <div className="flex items-center">

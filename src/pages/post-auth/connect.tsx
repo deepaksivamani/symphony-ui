@@ -5,7 +5,7 @@ const Connect = () => {
   const [searchResults, setSearchResult] = useState([]);
   const [searchStr, setSearchStr] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     setSearchStr(e.target.value);
     console.log("searched for: ", e.target.value);
     if (e.target.value.length) {
@@ -47,34 +47,34 @@ const Connect = () => {
               </div>
             </nav>
 
-            <div class="middle-wrapper px-4 lg:px-10 overflow-y-auto md:overscroll-y-none mh-calc">
-              <h4 class="mt-10 mb-5 text-2xl">Your connections </h4>
+            <div className="middle-wrapper px-4 lg:px-10 overflow-y-auto md:overscroll-y-none mh-calc">
+              <h4 className="mt-10 mb-5 text-2xl">Your connections </h4>
               <p>
                 To help Symphony build the most effective audiences for your
                 marketing, please connect your streaming services and social
                 media profiles.
               </p>
-              <div class="h-10"></div>
+              <div className="h-10"></div>
               <form action="">
-                <hr class="h-px	bg-gray-200" />
-                <div class="add-new">
+                <hr className="h-px	bg-gray-200" />
+                <div className="add-new">
                   <a href="#">
-                    <div class="sy-card">
-                      <div class="flex tems-center">
-                        <div class="artist-img">
+                    <div className="sy-card">
+                      <div className="flex tems-center">
+                        <div className="artist-img">
                         <img src={require('../../assets/images/facebook.svg').default}/>
                         </div>
-                        <div class="px-3 items-center flex">
-                          <h5 class="text-dark">Facebook</h5>
+                        <div className="px-3 items-center flex">
+                          <h5 className="text-dark">Facebook</h5>
                         </div>
                       </div>
                       <div>
-                        <a class="hidden" href="#">
+                        <a className="hidden" href="#">
                           Connect
                         </a>
                         <div>
-                          <div class="flex items-center ">
-                            <p class="px-3 text-fontColor-100">
+                          <div className="flex items-center ">
+                            <p className="px-3 text-fontColor-100">
                               Booba official<span>50k followers</span>
                             </p>
                             <a href="#">
@@ -86,22 +86,22 @@ const Connect = () => {
                     </div>
                   </a>
                   <a href="#">
-                    <div class="sy-card">
-                      <div class="flex items-center">
-                        <div class="artist-img">
+                    <div className="sy-card">
+                      <div className="flex items-center">
+                        <div className="artist-img">
                         <img src={require('../../assets/images/insta.svg').default}/>
                         </div>
-                        <div class="px-3">
-                          <h5 class="text-dark">Instagram</h5>
+                        <div className="px-3">
+                          <h5 className="text-dark">Instagram</h5>
                         </div>
                       </div>
                       <div>
-                        <a class="text-primary" href="#">
+                        <a className="text-primary" href="#">
                           Connect
                         </a>
-                        <div class="hidden">
-                          <div class="flex items-center">
-                            <p class="px-3">
+                        <div className="hidden">
+                          <div className="flex items-center">
+                            <p className="px-3">
                               Booba official
                               <br />
                               50k followers
@@ -115,22 +115,22 @@ const Connect = () => {
                     </div>
                   </a>
                   <a href="#">
-                    <div class="sy-card">
-                      <div class="flex items-center">
-                        <div class="artist-img">
+                    <div className="sy-card">
+                      <div className="flex items-center">
+                        <div className="artist-img">
                           <img src={require('../../assets/images/twitter.svg').default}/>
                         </div>
-                        <div class="px-3">
-                          <h5 class="text-dark">Twitter</h5>
+                        <div className="px-3">
+                          <h5 className="text-dark">Twitter</h5>
                         </div>
                       </div>
                       <div>
-                        <a class="text-primary" href="#">
+                        <a className="text-primary" href="#">
                           Connect
                         </a>
-                        <div class="hidden">
-                          <div class="flex items-center">
-                            <p class="px-3">
+                        <div className="hidden">
+                          <div className="flex items-center">
+                            <p className="px-3">
                               Booba official
                               <br />
                               50k followers
@@ -145,31 +145,31 @@ const Connect = () => {
                   </a>
                 </div>
 
-                <div class="pt-10 pb-5 hr-bline">
-                  <p class="text-dark">
+                <div className="pt-10 pb-5 hr-bline">
+                  <p className="text-dark">
                     <strong>Streaming platforms</strong>
                     <br />
                   </p>
                 </div>
-                <div class="add-new">
+                <div className="add-new">
                   <a href="#"></a>
                   <a href="#">
-                    <div class="sy-card">
-                      <div class="flex items-center">
-                        <div class="artist-img">
+                    <div className="sy-card">
+                      <div className="flex items-center">
+                        <div className="artist-img">
                           <img src={require('../../assets/images/youtube.svg').default}/>
                         </div>
-                        <div class="px-3">
-                          <h5 class="text-dark">Youtube</h5>
+                        <div className="px-3">
+                          <h5 className="text-dark">Youtube</h5>
                         </div>
                       </div>
                       <div>
-                        <a class="text-primary" href="#">
+                        <a className="text-primary" href="#">
                           Connect
                         </a>
-                        <div class="hidden">
-                          <div class="flex items-center">
-                            <p class="px-3">
+                        <div className="hidden">
+                          <div className="flex items-center">
+                            <p className="px-3">
                               Booba official
                               <br />
                               50k followers
@@ -183,22 +183,22 @@ const Connect = () => {
                     </div>
                   </a>
                   <a href="#">
-                    <div class="sy-card">
-                      <div class="flex items-center">
-                        <div class="artist-img">
+                    <div className="sy-card">
+                      <div className="flex items-center">
+                        <div className="artist-img">
                         <img src={require('../../assets/images/spotify.svg').default}/>
                         </div>
-                        <div class="px-3">
-                          <h5 class="text-dark">Spotify</h5>
+                        <div className="px-3">
+                          <h5 className="text-dark">Spotify</h5>
                         </div>
                       </div>
                       <div>
-                        <a class="text-primary" href="#">
+                        <a className="text-primary" href="#">
                           Connect
                         </a>
-                        <div class="hidden">
-                          <div class="flex items-center">
-                            <p class="px-3">
+                        <div className="hidden">
+                          <div className="flex items-center">
+                            <p className="px-3">
                               Booba official
                               <br />
                               50k followers
@@ -212,22 +212,22 @@ const Connect = () => {
                     </div>
                   </a>
                   <a href="#">
-                    <div class="sy-card">
-                      <div class="flex items-center">
-                        <div class="artist-img">
+                    <div className="sy-card">
+                      <div className="flex items-center">
+                        <div className="artist-img">
                         <img src={require('../../assets/images/soundcloud.svg').default}/>
                         </div>
-                        <div class="px-3">
-                          <h5 class="text-dark">Soundcloud</h5>
+                        <div className="px-3">
+                          <h5 className="text-dark">Soundcloud</h5>
                         </div>
                       </div>
                       <div>
-                        <a class="text-primary" href="#">
+                        <a className="text-primary" href="#">
                           Connect
                         </a>
-                        <div class="hidden">
-                          <div class="flex items-center">
-                            <p class="px-3">
+                        <div className="hidden">
+                          <div className="flex items-center">
+                            <p className="px-3">
                               Booba official
                               <br />
                               50k followers
