@@ -2,7 +2,7 @@ import React from "react";
 
 const Landing = () => {
   return (
-    <div className="flex justify-between items-center h-calc ">
+    <div className="flex justify-between items-center h-calc mt-14">
       <div className="card-body">
         <div className="bg-white shadow-none lg:shadow-lg">
           <div className="hidden lg:block bg-primary w-full p-8 text-center">
