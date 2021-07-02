@@ -10,7 +10,7 @@ const PostAuthRoutes = () => {
     <div>
       <Router>
         <Navbar />
-        <div className="p-2" style={{background: '#F2F2F2'}}>
+        <div className="p-2 mt-8">
           <Switch>
             <Route exact path="/add-artist" component={AddArtist} />
             <Route exact path="/connect" component={Connect} />
