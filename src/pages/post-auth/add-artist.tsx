@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from 'react-router-dom';
 import { Line } from 'react-chartjs-2';
 import { useTabs, TabPanel } from "react-headless-tabs";
 import { TabSelector } from '../../helpers/TabSelector';
@@ -10,6 +11,13 @@ const AddArtist = () => {
   const [selectedTab, setSelectedTab] = useTabs(tabs, defaultTab)
   const [searchResults, setSearchResult] = useState([]);
   const [searchStr, setSearchStr] = useState('');
+  const location = useLocation();
+
+  useEffect(() => {
+    if(location.search.includes('connect')) {
+      setSelectedTab('connect');
+    }
+  }, [])
 
   const handleChange = (e: any) => {
     setSearchStr(e.target.value);
