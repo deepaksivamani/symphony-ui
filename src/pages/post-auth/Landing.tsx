@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
@@ -44,7 +45,9 @@ const Landing = () => {
             <div className="bottom-24 swiper-pagination"></div> */}
             {/* Button  */}
             <div className="text-center absolute w-full bottom-0 mb-5 px-4">
+              <Link to="/add-artist">
               <button className="btn-primary">Get started</button>
+              </Link>
             </div>
           </div>
         </div>
