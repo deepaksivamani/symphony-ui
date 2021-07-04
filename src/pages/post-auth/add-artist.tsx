@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { useLocation } from 'react-router-dom';
+import React, { useState } from "react";
 import { Line } from 'react-chartjs-2';
 import { useTabs, TabPanel } from "react-headless-tabs";
 import { TabSelector } from '../../helpers/TabSelector';
@@ -11,13 +10,6 @@ const AddArtist = () => {
   const [selectedTab, setSelectedTab] = useTabs(tabs, defaultTab)
   const [searchResults, setSearchResult] = useState([]);
   const [searchStr, setSearchStr] = useState('');
-  const location = useLocation();
-
-  useEffect(() => {
-    if(location.search.includes('connect')) {
-      setSelectedTab('connect');
-    }
-  }, [])
 
   const handleChange = (e: any) => {
     setSearchStr(e.target.value);
@@ -35,12 +27,12 @@ const AddArtist = () => {
   };
 
   return (
-    <div className="mt-5">
+    <div className="">
       <div className="card-body">
         <div className="card-content">
           <div className="top-wrapper">
-            <div className="bg-primary p-3">
-              <h4 className="text-center text-white lg:text-white text-2xl al">
+            <div className="card-head">
+              <h4 className="text-center text-dark lg:text-white text-2xl al">
                 Add an artist
               </h4>
             </div>
@@ -58,7 +50,7 @@ const AddArtist = () => {
                 Connect
               </TabSelector>
             </nav>
-            <div className="p-4">
+            <div className="">
               <TabPanel hidden={selectedTab !== 'basic'}>
                 {/* <nav className="bg-white pt-2 border-b border-gray-200 ">
                   <div className="mb-px flex px-4 md:justify-between md:px-10 md:overscroll-none whitespace-nowrap">
@@ -77,14 +69,14 @@ const AddArtist = () => {
                   </div>
                 </nav> */}
 
-                <div className="middle-wrapper px-4 lg:px-10 overflow-y-auto mh-calc">
-                  <h4 className="py-5 text-xl font-bold">What is the name of the artist</h4>
+                <div className="middle-wrapper px-4 lg:px-10 ">
+                  <h4 className="mt-10 mb-5 text-2xl">What is the name of the artist</h4>
                   {/* <hr className="h-px	bg-gray-200" /> */}
                   <form action="">
                     <div className="input-form flex flex-row align-middle">
                       <label
                         htmlFor=""
-                        className="w-2/12 bg-white items-center flex text-lg"
+                        className="absolute h-16 bg-white items-center flex text-lg "
                       >
                         Name
                       </label>
@@ -93,7 +85,7 @@ const AddArtist = () => {
                         placeholder="eg. Jay-Z"
                         onChange={handleChange}
                         value={searchStr}
-                        className="border outline-none rounded-2xl p-4 text-left border-gray-200 w-10/12"
+                        className="border-b p-6 outline-none text-right border-gray-200 w-full"
                       />
                     </div>
                     <div className="add-new">
@@ -153,7 +145,7 @@ const AddArtist = () => {
 
               </TabPanel>
               <TabPanel hidden={selectedTab !== 'connect'}>
-                <div className="middle-wrapper px-4 lg:px-10 overflow-y-auto md:overscroll-y-none mh-calc">
+                <div className="middle-wrapper px-4 lg:px-10 ">
                   <h4 className="mt-10 mb-5 text-2xl">Your connections </h4>
                   <p>
                     To help Symphony build the most effective audiences for your
@@ -161,12 +153,13 @@ const AddArtist = () => {
                     media profiles.
                   </p>
                   <div className="h-10"></div>
+
                   <form action="">
                     <hr className="h-px	bg-gray-200" />
                     <div className="add-new">
                       <a href="#">
                         <div className="sy-card">
-                          <div className="flex tems-center">
+                          <div className="flex flex-none text-center">
                             <div className="artist-img">
                               <img src={require('../../assets/images/facebook.svg').default} />
                             </div>
@@ -180,7 +173,7 @@ const AddArtist = () => {
                             </a>
                             <div>
                               <div className="flex items-center ">
-                                <p className="px-3 text-fontColor-100">
+                                <p className="pl-6 pr-3 text-fontColor-100">
                                   Booba official<span>50k followers</span>
                                 </p>
                                 <a href="#">

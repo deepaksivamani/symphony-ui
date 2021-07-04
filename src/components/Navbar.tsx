@@ -7,112 +7,101 @@ import websiteIcon from "../assets/images/websiteIcon.svg";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 const Navbar = () => {
   return (
-    <div className="fixed top-0 w-full">
-      <section className="hidden lg:block py-4 px-4 lg:px-10 bg-primary">
-        <nav className="relative flex justify-between items-center">
-          <a className="text-2xl text-white font-bold" href="#">
+    <div className="relative ">
+      <section className=" fixed bottom-0 lg:top-0 left-0 w-full z-50 py-4 px-4 lg:px-10 bg-white lg:bg-primary h-20 lg:h-16 w-full">
+        <nav className="relative flex justify-around lg:justify-between items-center h-14 lg:h-auto">
+          <a className="hidden lg:block text-2xl text-white font-bold" href="#">
             <img src={symphonyLogo} width={"auto"} className="h-7" alt="logo" />
           </a>
-          <div className="lg:hidden">
-            <button className="p-2 navbar-burger">
-              <svg
-                className="w-10 h-3"
-                width="39"
-                height="13"
-                viewBox="0 0 39 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect width="39" height="2" rx="1" fill="#C4C4C4"></rect>
-                <rect
-                  x="19"
-                  y="11"
-                  width="20"
-                  height="2"
-                  rx="1"
-                  fill="#C4C4C4"
-                ></rect>
-              </svg>
-            </button>
-          </div>
-          <div className="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-            <ul className="flex items-center text-white space-x-10">
-              <li>
-                <a
-                  className="text-white font-bold text-lg flex justify-between items-center"
-                  href="/dashboard"
-                >
-                  <span>
-                    <img
-                      className="w-8 mr-5"
-                      src={dashboardIcon}
-                      alt=""
-                      width={"auto"}
-                      height={"auto"}
-                    />
-                  </span>
-                  Dashboard
-                </a>
-              </li>
+          <div className=" absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+            <ul className="flex items-center text-white space-x-10 ">
+                <li>
+                  <a
+                    className="text-black lg:text-white block lg:flex items-center"
+                    href="/dashboard"
+                  >
+                    <div className="block lg:inline-block">
+                    <svg className=" mx-auto stroke-current text-black lg:text-white "xmlns="http://www.w3.org/2000/svg" width="22.581" height="22.394" viewBox="0 0 22.581 22.394">
+    <path id="Path_15054" data-name="Path 15054" d="M10.693,21.39H8.863l-.26-.05-.25-.06L8.1,21.22l-.25-.07L7.6,21.08,7.363,21l-.25-.09-.24-.09-.239-.1-.23-.09-.239-.12-.23-.1-.23-.13-.22-.12-.23-.13-.22-.131-.21-.15a1.6,1.6,0,0,1-.22-.14l-.21-.15-.2-.149-.2-.16-.2-.17-.2-.17-.19-.17-.18-.18a1.645,1.645,0,0,1-.19-.19l-.18-.18-.18-.2-.16-.19-.17-.211a1.484,1.484,0,0,0-.16-.2c-.049-.08-.11-.15-.159-.22s-.14-.14-.14-.211l-.16-.229-.13-.211c-.05-.079-.14-.159-.14-.239l-.13-.23-.131-.239-.11-.23c-.04-.09-.12-.17-.12-.26l-.11-.24c-.031-.09-.111-.169-.111-.259l-.09-.25-.059-.18,10.25-3.33,10.3-3.29c0,.05-.03.05,0,.15a1.058,1.058,0,0,1,.08.29l.1.18a.534.534,0,0,1,.07.32v.18a.854.854,0,0,1,.07.37c0,.04-.06-.031,0,.12a1.128,1.128,0,0,1,.059.44v.05a10.8,10.8,0,0,1-6.84,11.09h-.049l-.51.18-.53.149h-.139l-.391.09h-.18l-.35.06h-.21l-.33.05H10.943q-.063,0-.125,0T10.693,21.39ZM.423,13.77l-.07-.28-.06-.23c-.03-.1-.14-.23-.14-.3v-.2l-.06-.35c0-.05.05,0,0-.14a1.218,1.218,0,0,1-.05-.419v-.07a10.868,10.868,0,0,1,2.54-8l7.83,6.92-4.94,1.61-5,1.62A.217.217,0,0,1,.423,13.77ZM10.983.11H12.6l.51.121L13.432.3l.45.13.35.1.46.16.32.12.46.22.28.13a5.038,5.038,0,0,1,.5.28c.075.036.148.076.22.12a10.115,10.115,0,0,1,1.32,1l.19.18c.139.121.28.24.41.371l.211.21c.11.12.229.24.34.37l.22.27c.1.13.2.25.29.38l.211.3.259.39c.06.11.121.22.191.33l.229.41c.06.11.1.21.17.35s.13.28.19.42l.15.38a2.634,2.634,0,0,1,.13.35l-10,3.25ZM2.873,3.53l.14-.149.11-.111c.16-.17.329-.329.509-.49l.17-.15a2.116,2.116,0,0,1,.23-.19l.27-.21.21-.16.36-.25.14-.09.54-.319.1-.06.46-.24.14-.12L6.683.81l.17-.09.6-.22c.28-.09.55-.17.81-.23l.26-.06.53-.1L9.4.06A1.311,1.311,0,0,1,9.883,0h.74V10.39Z" transform="translate(0.506 0.5)" fill="none" stroke="currentColor" stroke-width="1"/>
+  </svg>
+  </div>
+                    <div className=" block lg:inline-block px-1 lg:px-3 text-lg font-light">Dashboard</div>
+                  </a>
+                </li>
 
-              <li>
-                <a
-                  className="text-white font-bold text-lg flex justify-between items-center"
-                  href="/profile"
-                >
-                  <span>
-                    <img
-                      className="w-8 mr-5"
-                      src={profileIcon}
-                      alt=""
-                      width={"auto"}
-                      height={"auto"}
-                    />
-                  </span>
-                  Profile
-                </a>
-              </li>
+                <li>
+                  <a
+                    className="text-black lg:text-white block lg:flex items-center"
+                    href="/dashboard"
+                  >
+                    <div className="block lg:inline-block">
+                    <svg className=" mx-auto fill-current text-black lg:text-white " xmlns="http://www.w3.org/2000/svg" width="22.34" height="22.34" viewBox="0 0 22.34 22.34">
+  <path id="Path_15080" data-name="Path 15080" d="M11.1,0a11.14,11.14,0,1,0,7.938,3.224A11.17,11.17,0,0,0,11.1,0Zm0,1.24a9.93,9.93,0,0,1,8,15.9,17.77,17.77,0,0,0-3.46-1.63c-.79-.11-2-.21-2.24-.56a10.66,10.66,0,0,1-.4-1.74,1.6,1.6,0,0,0,.52-1c.06-.64.16-1.19.16-1.19a.58.58,0,0,0,.45-.45,6,6,0,0,1,.32-1.19c.08-.18.23-.87-.27-.71a7.83,7.83,0,0,0,.21-2.5,2.09,2.09,0,0,0-.47-1.06,2.58,2.58,0,0,0-.53-.58,7.21,7.21,0,0,0-2.11-.66,4.21,4.21,0,0,0-1.84.32,1.22,1.22,0,0,0-.87.66A1.12,1.12,0,0,0,8,5c-.26.21-.34.79-.45,1.16a8.77,8.77,0,0,0,.24,2.51c-.5-.16-.34.55-.26.71a7,7,0,0,1,.31,1.19.53.53,0,0,0,.45.42,11.3,11.3,0,0,1,.16,1.19,1.57,1.57,0,0,0,.55,1A7.94,7.94,0,0,1,8.6,15c-.21.35-1.45.48-2.24.58a14.54,14.54,0,0,0-3.19,1.53,9.75,9.75,0,0,1-2-5.85A10,10,0,0,1,11.1,1.24Z" transform="translate(0 0)" fill="currentColor"/>
+</svg>
 
-              <li>
-                <a
-                  className="text-white font-bold text-lg flex justify-between items-center"
-                  href="/marketing"
-                >
-                  <span>
-                    <img
-                      className="w-8 mr-5"
-                      src={marketingIcon}
-                      alt=""
-                      width={"auto"}
-                      height={"auto"}
-                    />
-                  </span>
-                  Marketing
-                </a>
-              </li>
+  </div>
+                    <div className=" block lg:inline-block px-1 lg:px-3 text-lg font-light">Profile</div>
+                  </a>
+                </li>
 
-              <li>
-                <a
-                  className="text-white font-bold text-lg flex justify-between items-center"
-                  href="/website"
-                >
-                  <span>
-                    <img
-                      className="w-8 mr-5"
-                      src={websiteIcon}
-                      alt=""
-                      width={"auto"}
-                      height={"auto"}
-                    />
-                  </span>
-                  Website
-                </a>
-              </li>
+                <li>
+                  <a
+                    className="text-black lg:text-white block lg:flex items-center"
+                    href="/dashboard"
+                  >
+                    <div className="block lg:inline-block">
+                    <svg className=" mx-auto stroke-current text-black lg:text-white " xmlns="http://www.w3.org/2000/svg" width="23.331" height="23.366" viewBox="0 0 23.331 23.366">
+  <g id="Layer_2" data-name="Layer 2" transform="translate(0 0.012)">
+    <g id="Layer_1" data-name="Layer 1">
+      <path id="Union_7" data-name="Union 7" d="M-6011.991-965.161h-3.659a.176.176,0,0,1-.16-.1l-.31-.59a24.327,24.327,0,0,1-2.885-9.38h-.765a.179.179,0,0,1-.133-.048.183.183,0,0,1-.058-.131v-1.19h-3.478a.192.192,0,0,1-.182-.19v-5.489a.181.181,0,0,1,.182-.18h3.478v-1.191a.189.189,0,0,1,.053-.138.178.178,0,0,1,.138-.051h5.456l10.5-3.651a.187.187,0,0,1,.161,0,.2.2,0,0,1,.079.15v6.251h.281a2,2,0,0,1,2,2,2,2,0,0,1-2,2v.03h-.281v5.309a.194.194,0,0,1-.079.15.19.19,0,0,1-.1.03h-.059l-10.5-3.66h-.677a24.108,24.108,0,0,0,2.872,9.231l.329.6a.173.173,0,0,1,0,.18.159.159,0,0,1-.134.073A.159.159,0,0,1-6011.991-965.161Zm-3.83-.839.28.47h3.24l-.18-.32a24.482,24.482,0,0,1-2.88-9.38h-3.3A24.181,24.181,0,0,0-6015.82-966Zm11.881-6v-15.06l-10.16,3.523v8Zm-15.651-3.6h5.131v-7.87h-5.131Zm-3.66-1.4h3.289v-5.1h-3.289Zm19.68-.429h.281a1.649,1.649,0,0,0,1.521-1.645,1.649,1.649,0,0,0-1.521-1.645h-.281Z" transform="translate(6024.12 988)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+  </g>
+</svg>
+
+  </div>
+                    <div className=" block lg:inline-block px-1 lg:px-3 text-lg font-light">Marketing</div>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    className="text-black lg:text-white block lg:flex items-center"
+                    href="/dashboard"
+                  >
+                    <div className="block lg:inline-block">
+                    <svg className=" mx-auto stroke-current text-black lg:text-white "xmlns="http://www.w3.org/2000/svg" width="22.573" height="17.591" viewBox="0 0 22.573 17.591">
+  <path id="Union_8" data-name="Union 8" d="M-5965-932.865h-21.61a.161.161,0,0,1-.161-.159v-16.62a.161.161,0,0,1,.161-.161H-5965a.162.162,0,0,1,.15.161v16.62a.138.138,0,0,1-.037.116.138.138,0,0,1-.1.044Zm-21.451-.32h21.291v-13.07h-21.291Zm21.291-13.38v-2.94h-21.291v2.94Zm-5.209,11.06h-1.331a.16.16,0,0,1-.149-.159v-.82a3.511,3.511,0,0,1-.921-.38l-.58.58a.137.137,0,0,1-.109.053.14.14,0,0,1-.11-.053l-.94-.941a.138.138,0,0,1,0-.11.152.152,0,0,1,0-.11l.58-.58a3.706,3.706,0,0,1-.34-.88h-.82a.151.151,0,0,1-.15-.15v-1.319a.161.161,0,0,1,.15-.161h.82a3.711,3.711,0,0,1,.38-.919l-.58-.58a.17.17,0,0,1,0-.221l.94-.939a.159.159,0,0,1,.219,0l.58.58a3.524,3.524,0,0,1,.919-.38v-.82a.16.16,0,0,1,.15-.159h1.291a.169.169,0,0,1,.159.159v.82a3.453,3.453,0,0,1,.911.38l.58-.58a.159.159,0,0,1,.219,0l.94.939a.14.14,0,0,1,.05.111.161.161,0,0,1-.05.11l-.58.58a3.406,3.406,0,0,1,.38.919h.82a.16.16,0,0,1,.159.161v1.319a.159.159,0,0,1-.159.15h-.82a3.263,3.263,0,0,1-.38.919l.58.58a.165.165,0,0,1,.05.111.135.135,0,0,1-.05.11l-.94.941a.137.137,0,0,1-.109.053.142.142,0,0,1-.11-.053l-.55-.581a3.47,3.47,0,0,1-.919.38v.82a.162.162,0,0,1-.155.122Zm-2.311-1.69a3.1,3.1,0,0,0,1,.43.151.151,0,0,1,.12.15v.79h1.029v-.79a.152.152,0,0,1,.12-.15,3.024,3.024,0,0,0,1-.43.16.16,0,0,1,.2,0l.561.56.709-.711-.561-.559a.161.161,0,0,1,0-.2,2.9,2.9,0,0,0,.431-1,.169.169,0,0,1,.159-.131h.78v-1h-.78a.169.169,0,0,1-.159-.131,2.9,2.9,0,0,0-.431-1,.161.161,0,0,1,0-.2l.561-.56-.709-.711-.561.55a.149.149,0,0,1-.2,0,3.168,3.168,0,0,0-1-.43.162.162,0,0,1-.131-.15v-.789h-1v.789a.149.149,0,0,1-.12.15,3.161,3.161,0,0,0-1,.43.141.141,0,0,1-.189,0l-.561-.551-.709.711.55.56a.149.149,0,0,1,0,.2,3.065,3.065,0,0,0-.44,1,.159.159,0,0,1-.15.131h-.81v1h.791a.151.151,0,0,1,.15.131,3.074,3.074,0,0,0,.44,1,.152.152,0,0,1,0,.2l-.551.559.71.711.561-.56a.146.146,0,0,1,.094-.034A.151.151,0,0,1-5972.68-937.2Zm-4.391.96h-7.61a.169.169,0,0,1-.159-.159.161.161,0,0,1,.159-.111h7.61a.161.161,0,0,1,.161.161.16.16,0,0,1-.161.159Zm4.1-3.49a1.94,1.94,0,0,1,1.941-1.94,1.94,1.94,0,0,1,1.94,1.94,1.941,1.941,0,0,1-1.94,1.941A1.941,1.941,0,0,1-5972.97-939.725Zm1.941-1.609a1.621,1.621,0,0,0-1.621,1.62,1.621,1.621,0,0,0,1.621,1.62,1.621,1.621,0,0,0,1.62-1.62,1.617,1.617,0,0,0-.472-1.148,1.607,1.607,0,0,0-1.137-.472Zm-13.651,1.83a.17.17,0,0,1-.159-.161.158.158,0,0,1,.159-.159h5.411a.16.16,0,0,1,.161.159.161.161,0,0,1-.161.161Zm0-3.381a.159.159,0,0,1-.159-.159.169.169,0,0,1,.159-.161h8.651a.169.169,0,0,1,.159.161.16.16,0,0,1-.159.159Zm3.181-5.14a.75.75,0,0,1,.75-.75.749.749,0,0,1,.75.75.749.749,0,0,1-.75.75A.75.75,0,0,1-5981.5-948.025Zm.75-.479a.44.44,0,0,0-.44.44.44.44,0,0,0,.44.439.426.426,0,0,0,.326-.1.425.425,0,0,0,.155-.3.44.44,0,0,0-.127-.353.437.437,0,0,0-.309-.129Zm-4.27.479a.75.75,0,0,1,.75-.75.749.749,0,0,1,.75.75.749.749,0,0,1-.75.75A.75.75,0,0,1-5985.02-948.025Zm.31-.039a.439.439,0,0,0,.44.439.44.44,0,0,0,.44-.439.44.44,0,0,0-.44-.44A.44.44,0,0,0-5984.71-948.064Z" transform="translate(5987.096 950.131)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="0.65"/>
+</svg>
+
+  </div>
+                    <div className=" block lg:inline-block px-1 lg:px-3 text-lg font-light">Website</div>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    className="text-black lg:text-white block lg:flex items-center"
+                    href="/dashboard"
+                  >
+                    <div className="block lg:inline-block">
+                    <svg className=" mx-auto stroke-current fill-current text-black lg:text-white "xmlns="http://www.w3.org/2000/svg" width="22.54" height="22.59" viewBox="0 0 22.54 22.59">
+  <g id="Layer_1" data-name="Layer 1" transform="translate(-0.04 -0.04)">
+    <path id="Path_15055" data-name="Path 15055" d="M21.69,9.52l-2.11-.16a8.11,8.11,0,0,0-1-2.47l1.37-1.62a.87.87,0,0,0-.05-1.19L18.57,2.77a.87.87,0,0,0-1.19,0L15.77,4.09a8.49,8.49,0,0,0-2.47-1L13.13,1a.88.88,0,0,0-.87-.81H10.4A.88.88,0,0,0,9.52,1L9.36,3.07a8.11,8.11,0,0,0-2.47,1L5.27,2.72a.87.87,0,0,0-1.19,0L2.77,4.08a.87.87,0,0,0,0,1.19L4.09,6.88a8.49,8.49,0,0,0-1,2.47L1,9.52a.88.88,0,0,0-.81.87v1.86a.88.88,0,0,0,.81.88l2.11.16a8.11,8.11,0,0,0,1,2.47L2.72,17.38a.87.87,0,0,0,0,1.19l1.31,1.31a.87.87,0,0,0,1.19.05l1.61-1.37a8.49,8.49,0,0,0,2.47,1l.17,2.11a.88.88,0,0,0,.87.81H12.2a.88.88,0,0,0,.88-.81l.16-2.11a8.11,8.11,0,0,0,2.47-1l1.62,1.37a.87.87,0,0,0,1.19-.05l1.31-1.31a.87.87,0,0,0,.05-1.19l-1.37-1.61a8.49,8.49,0,0,0,1-2.47l2.11-.17a.88.88,0,0,0,.81-.87V10.4A.88.88,0,0,0,21.69,9.52Zm-.07,2.75-2.75.23-.06.32a7.67,7.67,0,0,1-1.15,2.75l-.18.27L19.28,18l-1.34,1.32-2.11-1.79-.27.18a7.65,7.65,0,0,1-2.75,1.14l-.32.06-.24,2.77H10.38l-.23-2.75-.32-.06a7.67,7.67,0,0,1-2.75-1.15l-.27-.18-2.12,1.8-1.32-1.4,1.79-2.11L5,15.56a7.65,7.65,0,0,1-1.14-2.75l-.06-.32L1,12.25V10.38l2.75-.23.06-.32A7.67,7.67,0,0,1,5,7.08l.18-.27L3.37,4.69,4.71,3.37,6.82,5.16,7.09,5A7.65,7.65,0,0,1,9.84,3.84l.32-.06L10.4,1h1.87l.23,2.75.32.06A7.67,7.67,0,0,1,15.57,5l.27.18L18,3.37l1.32,1.34L17.49,6.82l.18.27a7.65,7.65,0,0,1,1.14,2.75l.06.32,2.75.22v1.89Z" fill="#fff" stroke="currentColor" stroke-miterlimit="10" stroke-width="0.3"/>
+    <path id="Path_15056" data-name="Path 15056" d="M11.33,6.17a5.16,5.16,0,1,0,5.15,5.16,5.16,5.16,0,0,0-5.15-5.16Zm0,9.45a4.3,4.3,0,1,1,4.29-4.29h0a4.31,4.31,0,0,1-4.29,4.29Z" fill="currentColor" stroke="currentColor" stroke-miterlimit="10" stroke-width="0.3"/>
+  </g>
+</svg>
+
+  </div>
+                    <div className=" block lg:inline-block px-1 lg:px-3 text-lg font-light">Setting</div>
+                  </a>
+                </li>
+
+
             </ul>
           </div>
         </nav>
       </section>
-      <div className="opacity-100 py-4" style={{background: '#F2F2F2'}}></div>
+      {/* <div className="opacity-100 py-4" style={{background: '#F2F2F2'}}></div> */}
     </div>
   );
 };

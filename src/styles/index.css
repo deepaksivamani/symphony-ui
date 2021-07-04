@@ -3,10 +3,12 @@
 
 @tailwind utilities;
 
-.h-calc {
-  height: calc(100vh - 80px);
-}
 
+@media (max-width: 768px) {
+  .h-calc {
+    height: calc(100vh - 80px);
+  }
+}
 .mh-calc {
   height: calc(100vh - 158px - 100px);
 }
@@ -65,7 +67,7 @@
 }
 
 .artist-img {
-  @apply relative;
+  @apply relative w-10 h-10;
 }
 .artist-img img {
   @apply w-10 h-10 object-fill overflow-hidden rounded-md relative;
@@ -192,8 +194,23 @@ button:disabled {
 }
 
 .card-body {
-  @apply w-full lg:w-2/4  m-auto lg:pb-5 pb-4 bg-white;
+  @apply mx-auto bg-white;
 }
+@media (max-width: 1920px) {
+  .card-body{
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 981px) {
+  .card-body{
+    width: 100%;
+    margin: auto;
+    padding: 0px 10px;
+  }
+}
+
+
 /* @media (max-width: 1920px) {
   .card-body{
     height:fit-content; 
@@ -205,7 +222,7 @@ button:disabled {
   }
 } */
 .card-content {
-  @apply bg-white shadow-none flex flex-col justify-between h-screen lg:h-full mt-0 mb-0 lg:mt-28;
+  @apply bg-white shadow-none flex flex-col justify-between h-screen lg:h-full;
 }
 .card-head {
   @apply bg-white lg:bg-primary w-full p-5 text-center;
@@ -220,4 +237,27 @@ button:disabled {
 
 .onboarding-para {
   @apply text-left lg:text-center mb-8;
+}
+.middle-wrapper{
+  min-height: 300px;
+}
+.main-body{
+  @apply bg-background-100 py-0 lg:py-28;
+}
+/* dash-Header */
+
+.dash-header{
+  @apply bg-primary p-4 block lg:hidden ;
+}
+
+.dash-header h3{
+@apply text-white pb-6 text-2xl;
+}
+
+.bg-green{
+  background: #00ab00;
+border-radius: 4px;
+}
+ul li a{
+  @apply text-black lg:text-white ;
 }

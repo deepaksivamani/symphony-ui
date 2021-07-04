@@ -9,7 +9,7 @@ const AuthRoutes = () => {
   return (
     <Router>
       {/* <Navbar /> */}
-      <div className="p-2" style={{ background: '#F2F2F2' }}>
+      <div className="">
         <Switch>
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />

@@ -100,10 +100,22 @@ const Dashboard = () => {
   const [selectedTab, setSelectedTab] = useTabs(tabs, defaultTab)
 
   return (
-    <div className="mt-16">
+    <div className="mt-0 lg:mt-16 pb-20 lg:pb-0">
+      <div className="dash-header">
+    <h3>Dashboard</h3>
+    <div className="sy-card bg-green border-0 m-0 border-primary">
+        <div className="flex items-center">
+            <div className="artist-img"><img src={require('../../assets/images/p-3.svg').default} /></div>
+            <div className="px-3">
+                <h5 className="text-white">Booba</h5>
+            </div>
+        </div>
+        <div className="icon-block"><a href="#"><img src={require('../../assets/images/right-arrow-right.svg').default} /></a></div>
+    </div>
+</div>
       <div className="w-full md:w-8/12 mx-auto">
         <div className="header">
-          <h2 className="my-4 font-medium text-xl">Jayson</h2>
+          <h2 className="my-4 font-medium text-xl p-4">Jayson</h2>
         </div>
         <nav className="flex border-b border-gray-300">
         <TabSelector

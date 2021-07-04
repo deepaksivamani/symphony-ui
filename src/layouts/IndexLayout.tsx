@@ -11,7 +11,7 @@ const IndexLayout = () => {
     setAuthentication(true);
   }, [isAuthenticated]);
 
-  return isAuthenticated ? <FullLayout /> : <AuthLayout />;
+  return isAuthenticated ? <FullLayout /> : <div></div>;
 }
 
 export default IndexLayout;
